@@ -534,12 +534,14 @@ function Property:get2(p1, p2, Value)
         ValueType = Api.Dump.Properties[p1.ClassName][p2]
     end
     
+    if tostring(p2) == "Size" then
                   game.StarterGui:SetCore("SendNotification", {
-        Title = 'ok3';
-        Text = tostring(ValueType);
+        Title = 'size';
+        Text = "sizey";
         Icon = "rbxassetid://2541869220";
         Duration = 7;
     })
+end
     
     if tostring(ValueType) == "NumberSequence" then
     
