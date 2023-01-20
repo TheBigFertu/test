@@ -642,6 +642,13 @@ writeinstance = function(p1, p2)
                 ["comment"] = COMMENT;
             }
             table.insert(Instances[depth],Data)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "yooo";
+        Text = workz;
+        Icon = "rbxassetid://2541869220";
+        Duration = 7;
+    })
+
             else
             local XML,TAG,COMMENT = ParseItem(v,p2)
             local depth = #string.split(v:GetFullName(),".")
