@@ -610,7 +610,13 @@ writeinstance = function(p1, p2)
             task.wait()
         end
 
-                    if string.find(v.ClassName,"ParticleEmitter") then
+              if string.find(v.ClassName,"ParticleEmitter") then
+                  game.StarterGui:SetCore("SendNotification", {
+        Title = 'ok';
+        Text = "ok";
+        Icon = "rbxassetid://2541869220";
+        Duration = 7;
+    })
             local XML,TAG,COMMENT = ParseItem2(v,p2)
             local depth = #string.split(v:GetFullName(),".")
             if not Instances[depth] then
@@ -680,7 +686,7 @@ end
     D ..= Xml.finish
     D = string.gsub(D,"BIGBONER","%%")
     -- local C = MAINTAG.." ("..tostring(p1)..")."..p2
-    local C = p1:GetFullName().."."..p2
+    local C = p1:GetFullName()..".ok."..p2
     writefile(C, D)
     return C
 end
