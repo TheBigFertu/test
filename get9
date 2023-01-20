@@ -541,11 +541,11 @@ function Property:get2(p1, p2, Value)
         Duration = 7;
     })
     
-    if type(ValueType) == typeof(NumberSequence) then
+    if tostring(ValueType) == "NumberSequence" then
     
                   game.StarterGui:SetCore("SendNotification", {
         Title = 'ok2';
-        Text = "ok2";
+        Text = "NUMBERSEQUENCE WOO";
         Icon = "rbxassetid://2541869220";
         Duration = 7;
     })
