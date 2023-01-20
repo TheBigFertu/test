@@ -627,8 +627,8 @@ writeinstance = function(p1, p2)
         if i%50 == 0 then
             task.wait()
         end
-        if not string.find(v.ClassName,"Script") then
-            if string.find(v.ClassName,"ParticleEmitter") then
+
+                    if string.find(v.ClassName,"ParticleEmitter") then
             local XML,TAG,COMMENT = ParseItem2(v,p2)
             local depth = #string.split(v:GetFullName(),".")
             if not Instances[depth] then
@@ -642,14 +642,9 @@ writeinstance = function(p1, p2)
                 ["comment"] = COMMENT;
             }
             table.insert(Instances[depth],Data)
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "yooo";
-        Text = workz;
-        Icon = "rbxassetid://2541869220";
-        Duration = 7;
-    })
+else
+        if not string.find(v.ClassName,"Script") then
 
-            else
             local XML,TAG,COMMENT = ParseItem(v,p2)
             local depth = #string.split(v:GetFullName(),".")
             if not Instances[depth] then
@@ -663,8 +658,8 @@ writeinstance = function(p1, p2)
                 ["comment"] = COMMENT;
             }
             table.insert(Instances[depth],Data)
-            end
         end
+end
     end
     local D = Xml.start..newline
     local MAINXML,MAINTAG,MAINCOMMENT = ParseItem(p1,p2)
