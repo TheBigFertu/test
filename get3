@@ -509,24 +509,6 @@ function Property:get2(p1, p2, Value)
                 },
                 "boolean"
             },
-        siz =
-            {
-                gethiddenproperty,
-                {
-                    p1,
-                    "Size"
-                },
-                "NumberSequence"
-            },
-        trans =
-            {
-                gethiddenproperty,
-                {
-                    p1,
-                    "Transparency"
-                },
-                "NumberSequence"
-            },
         shap =
             {
                 gethiddenproperty,
