@@ -69,6 +69,12 @@ function Property:convert(p1, p2, p3, p4)
                 table.insert(ConvertedArray, Keypoints.Time)
                 table.insert(ConvertedArray, Keypoints.Value)
             end
+                              game.StarterGui:SetCore("SendNotification", {
+        Title = 'so it is acxtivating';
+        Text = "kk";
+        Icon = "rbxassetid://2541869220";
+        Duration = 7;
+    })
             return string.format(Conversion_Format, p2, tostring(unpack(ConvertedArray)))
         end,
         ColorSequence = function()
